@@ -16,6 +16,7 @@
   "author": "hello@dyve.dev",
   "license": "ISC",
   "dependencies": {
-    "yeoman-generator": "^4.12.0"
+    "yeoman-generator": "^4.12.0",
+    "yosay": "^2.0.2"
   }
 }

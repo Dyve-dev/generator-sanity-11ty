@@ -1,1 +1,24 @@
 node_modules
+coverage
+.nyc_output
+
+### Node template
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# dotenv environment variables file
+.env
+.env.tes
+
+#IDE's
+.idea/
+.vscode/*
+
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
