@@ -1,0 +1,28 @@
+footer {
+  background-color: rgb(var(--red-footer));
+  color: #fff;
+}
+footer .ft-container {
+  @apply container mx-auto flex justify-center py-4;
+}
+
+.footer-copyright {
+  text-align: center !important;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 8px;
+}
+
+footer .contact {
+  min-width: 300px;
+}
+
+footer .contact .street {
+  margin-top: 0.8em;
+}
+footer .contact .phone {
+  margin-top: 0.8em;
+}
+footer .contact .email {
+  margin-top: 0.8em;
+}

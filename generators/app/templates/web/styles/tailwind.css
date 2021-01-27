@@ -1,0 +1,31 @@
+@import "./import/variables.css";
+@import "./import/navigation.css";
+@import "./import/layout.css";
+@import "./import/footer.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .change {
+    color: transparent;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+@font-face {
+  font-family: "Museo_Slab_500_2";
+  src: url("/fonts/Museo_Slab_500_2-webfont.woff2") format("woff2"),
+    url("/fonts/Museo_Slab_500_2-webfont.woff") format("woff"),
+    url("Museo_Slab_500_2-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

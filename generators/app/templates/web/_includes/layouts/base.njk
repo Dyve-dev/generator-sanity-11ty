@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    {% set comma = joiner() %}
+      {% set keywords %}
+        {% for word in metadata.keywords -%}
+          {{ comma() }} {{ word }}
+        {%- endfor %}
+      {% endset %}
+    <meta name="keywords" content="{{ keywords }}">
+    
+    
+    
+    <meta name="author" content="{{ metadata.author.name }}">
+    <link rel="stylesheet" href="/styles/tailwind.css">
+  </head>
+  <body>
+    {% include "layouts/header.njk" %}
+
+    <main{% if templateClass %} class="main {{ templateClass }}"{% endif %}>
+      {{ content | safe }}
+      
+    </main>
+    
+    {% include "layouts/footer.njk" %}
+
+    <!-- Current page: {{ page.url | url }} -->
+  </body>
+</html>

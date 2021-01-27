@@ -1,0 +1,57 @@
+<div id="nav-btn" role="button" aria-label="button">
+    <div class="line l-top"></div>
+    <div class="line l-mid"></div>
+    <div class="line l-bot"></div>
+</div>
+<nav id="nav" role="navigation" aria-label="main">
+<ul>
+    <li>
+        <a href="/"><span class="nav-link-txt">Accueil</span></a>
+        <ul>
+            <li><a href="/"><span class="nav-link-txt">Notre histoire</span></a></li>
+            <li><a href="/"><span class="nav-link-txt">Notre équipe</span></a></li>
+        </ul>
+    </li>
+    
+    <li><a href="/"><span class="nav-link-txt">Prestations</span></a>
+        <ul>
+            <li><a href="/"><span class="nav-link-txt">Menuiserie intérieure</span></a></li>
+            <li><a href="/"><span class="nav-link-txt">Menuiserie extérieure</span></a></li>
+        </ul>
+    </li>
+
+    <li><a href="/"><span class="nav-link-txt">Rénovation</span></a>
+        <ul>
+            <li><a href="/"><span class="nav-link-txt">Rénovation intérieure</span></a></li>
+            <li><a href="/"><span class="nav-link-txt">Rénovation extérieure</span></a></li>
+        </ul>
+    </li>
+
+    <li><a href="/"><span class="nav-link-txt">Consultation de projets</span></a></li>
+
+    <li><a href="/"><span class="nav-link-txt">Service dépannage et réparation</span></a></li>
+
+    <li><a href="/"><span class="nav-link-txt">Contact</span></a></li>
+    
+</ul>
+</nav>
+<script>
+(function(){
+    const btn = document.getElementById('nav-btn');
+    btn.addEventListener('click', async ()=>{
+        const nav = document.getElementById('nav');
+        const navBtn = document.getElementById('nav-btn');
+        if(nav.classList.contains('anim-menu-open')){
+            nav.classList.remove('anim-menu-open');
+            navBtn.classList.remove('close');
+            document.documentElement.style.overflowY='auto';
+        }else{
+            nav.classList.add('anim-menu-open');
+            navBtn.classList.add('close');
+            document.documentElement.style.overflowY='hidden';
+        }
+    })
+    
+})()
+
+</script>
